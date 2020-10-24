@@ -1,5 +1,5 @@
 ---
-title: "Shelly Lachish's CV"
+title: "Dr Shelly Lachish's CV"
 author: Shelly Lachish
 date: "`r Sys.Date()`"
 params:
@@ -69,7 +69,7 @@ CV %>% print_contact_info()
 
 
 
-Skills {#skills}
+Data and Language Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -83,7 +83,7 @@ Disclaimer {#disclaimer}
 
 Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
 
-The source code is available [on github.com/shellylac/CV_datadrivencv](https://github.com/shellylac/CV_datadrivencv).
+<!-- The source code is available [on github.com/shellylac/CV_datadrivencv](https://github.com/shellylac/CV_datadrivencv). -->
 
 Last updated on `r Sys.Date()`.
 
@@ -92,23 +92,13 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Shelly Lachish {#title}
+Dr Shelly Lachish {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
-
-
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('education')
-```
-
 
 
 Career Summary {data-icon=laptop}
@@ -119,14 +109,25 @@ CV %<>% print_section('career_summary')
 ```
 
 
-<!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
+
+Scientific Publications {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('academic_articles')
+```
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
 
 Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
-
 <!-- ::: aside -->
 <!-- ```{r} -->
 <!-- CV %<>% print_text_block('teaching_experience_aside') -->
@@ -137,13 +138,6 @@ Teaching Experience {data-icon=chalkboard-teacher}
 CV %<>% print_section('teaching_positions')
 ```
 
-
-Scientific Publications {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('academic_articles')
-```
 
 
 ```{r}
@@ -183,17 +177,12 @@ CV %<>% print_section('volunteering')
 ```
 
 
-Media {data-icon=newspaper}
---------------------------------------------------------------------------------
+<!-- Media {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r}
-CV %<>% print_section('about_me_press')
-```
-
-
-<br>
-<br>
-
+<!-- ```{r} -->
+<!-- CV %<>% print_section('about_me_press') -->
+<!-- ``` -->
 
 <!-- Industry Experience {data-icon=suitcase} -->
 <!-- -------------------------------------------------------------------------------- -->
@@ -207,7 +196,6 @@ CV %<>% print_section('about_me_press')
 <!-- ```{r} -->
 <!-- CV %<>% print_section('industry_positions') -->
 <!-- ``` -->
-
 
 
 <!-- Selected Data Science Writing {data-icon=chart-line} -->
@@ -231,7 +219,3 @@ CV %<>% print_section('about_me_press')
 <!-- ```{r} -->
 <!-- CV %<>% print_section('by_me_press') -->
 <!-- ``` -->
-
-
-
-
