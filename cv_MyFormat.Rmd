@@ -7,7 +7,7 @@ params:
     value: false
 output:
   pagedown::html_resume:
-    css: ['dd_cv.css', 'resume']
+    css: ['dd_cv_nosidebar.css', 'resume']
     self_contained: true
 ---
 
@@ -101,6 +101,14 @@ CV %<>% print_text_block("intro")
 ```
 
 
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r education}
+CV %<>% print_section('education')
+```
+
+
 Career Summary {data-icon=laptop}
 --------------------------------------------------------------------------------
 
@@ -116,13 +124,6 @@ Scientific Publications {data-icon=book}
 CV %<>% print_section('academic_articles')
 ```
 
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r education}
-CV %<>% print_section('education')
-```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 <!-- #<br> -->
