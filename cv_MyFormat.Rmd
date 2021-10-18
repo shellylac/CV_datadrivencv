@@ -7,7 +7,7 @@ params:
     value: false
 output:
   pagedown::html_resume:
-    css: ['dd_cv_nosidebar.css', 'resume']
+    css: ['dd_cv.css', 'resume']
     self_contained: true
 ---
 
@@ -47,7 +47,15 @@ Aside
 ```{r build_network}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
-datadrivencv::build_network_logo(entries_data)
+#datadrivencv::build_network_logo(CV$entries_data)
+```
+
+
+Contact {#contact .specialcontact}
+--------------------------------------------------------------------------------
+
+```{r contact_info}
+CV %>% print_contact_info()
 ```
 
 
@@ -59,20 +67,19 @@ if(params$pdf_mode){
 }
 ```
 
-Contact {#contact}
+
+Tech Stack {#techstack}
 --------------------------------------------------------------------------------
 
-```{r contact_info}
-CV %>% print_contact_info()
+```{r skills_bar_techstack}
+CV %>% print_skill_bars(data = CV$tech_stack)
 ```
 
-
-
-Data Skills {#skills}
+Data Skills {#dataskills}
 --------------------------------------------------------------------------------
 
-```{r skills_bar}
-CV %>% print_skill_bars()
+```{r skills_bar_dataskills}
+CV %>% print_skill_bars(data = CV$data_skills)
 ```
 
 
@@ -80,8 +87,11 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-The source code is available [on github.com/shellylac/CV_datadrivencv](https://github.com/shellylac/CV_datadrivencv).
+Made in R with [**pagedown**](https://github.com/rstudio/pagedown). 
 
+Source code available [here](https://github.com/shellylac/CV_datadrivencv).
+
+Last updated on `r Sys.Date()`.
 
 
 Main

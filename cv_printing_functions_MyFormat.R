@@ -41,7 +41,9 @@ create_CV_object <-  function(data_location,
       googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
     }
     cv$entries_data  <- subset(read_gsheet(sheet_id = "entries"), in_resume == "TRUE")
-    cv$skills        <- read_gsheet(sheet_id = "language_skills")
+    #cv$skills        <- read_gsheet(sheet_id = "language_skills")
+    cv$data_skills   <- subset(read_gsheet(sheet_id = "language_skills"), block == "data_skills")
+    cv$tech_stack    <- subset(read_gsheet(sheet_id = "language_skills"), block == "tech_stack")
     cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
     cv$contact_info  <- read_gsheet(sheet_id = "contact_info")
   } else {
@@ -114,16 +116,16 @@ sanitize_links <- function(cv, text){
       # add links to links array
       cv$links <- c(cv$links, link_destinations)
 
-      # # Build map of link destination to superscript
-      # link_superscript_mappings <- purrr::set_names(
-      #   paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
-      #   paste0("(", link_destinations, ")")
-      # )
-      # 
-      # # Replace the link destination and remove square brackets for title
-      # text <- text %>%
-      #   stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
-      #   stringr::str_replace_all('\\[(.+?)\\]', "\\1")
+      # Build map of link destination to superscript
+      link_superscript_mappings <- purrr::set_names(
+        paste0("<sup>", (1:n_new_links) + n_links, "</sup>"),
+        paste0("(", link_destinations, ")")
+      )
+
+      # Replace the link destination and remove square brackets for title
+      text <- text %>%
+        stringr::str_replace_all(stringr::fixed(link_superscript_mappings)) %>%
+        stringr::str_replace_all('\\[(.+?)\\]', "\\1")
     }
   }
 
@@ -185,7 +187,7 @@ print_text_block <- function(cv, label){
 
 #' @description Construct a bar chart of skills
 #' @param out_of The relative maximum for skills. Used to set what a fully filled in skill bar is.
-print_skill_bars <- function(cv, out_of = 10, bar_color = "#969696", bar_background = "#d9d9d9", glue_template = "default"){
+print_skill_bars <- function(cv, out_of = 10, bar_color = "#969696", bar_background = "#d9d9d9", glue_template = "default", data){
 
   if(glue_template == "default"){
     glue_template <- "
@@ -196,7 +198,7 @@ print_skill_bars <- function(cv, out_of = 10, bar_color = "#969696", bar_backgro
                                       {bar_background} {width_percent}% 100%)\"
 >{skill}</div>"
   }
-  cv$skills %>%
+  data %>%
     dplyr::mutate(width_percent = round(100*as.numeric(level)/out_of)) %>%
     glue::glue_data(glue_template) %>%
     print()
