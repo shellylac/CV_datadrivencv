@@ -1,6 +1,14 @@
-# install.packages("devtools")
+#Need to install an older version of the icon package (now called icons) to get his package to work
+remotes::install_github('mitchelloharawild/icons@v0.1.0')
 devtools::install_github("nstrayer/datadrivencv")
+#skip the updating of the icon package
 
+#***********************
+# Note if you regenerate the cv_printing_functions.r script you will need to change
+#FROM: googlesheets4::sheets_deauth()
+#TO:   googlesheets4::gs4_deauth()
+# On line 32
+#***********************
 
 datadrivencv::use_datadriven_cv(
   full_name = "Shelly Lachish",

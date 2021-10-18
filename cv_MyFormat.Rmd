@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 )
 
 library(magrittr) # For the pipe
-source("cv_printing_functions.r")
+source("cv_printing_functions_MyFormat.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
@@ -41,14 +41,13 @@ if(params$pdf_mode) {
 }
 ```
 
-
 Aside
 ================================================================================
 
 ```{r build_network}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
+datadrivencv::build_network_logo(entries_data)
 ```
 
 
@@ -81,11 +80,7 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with R package [**pagedown**](https://github.com/rstudio/pagedown). 
-
 The source code is available [on github.com/shellylac/CV_datadrivencv](https://github.com/shellylac/CV_datadrivencv).
-
-Last updated on `r format(Sys.Date(), format = "%d-%m-%Y")`.
 
 
 
