@@ -11,6 +11,15 @@ output:
     self_contained: true
 ---
 
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
@@ -75,13 +84,17 @@ Tech Stack {#techstack}
 CV %>% print_skill_bars(data = CV$tech_stack)
 ```
 
-Data Skills {#dataskills}
+Skills {#dataskills}
 --------------------------------------------------------------------------------
 
 ```{r skills_bar_dataskills}
 CV %>% print_skill_bars(data = CV$data_skills)
 ```
 
+
+Research Papers
+--------------------------------------------------------------------------------
+Please see my [Google Scholar](https://scholar.google.co.uk/citations?user=mt4I9G0AAAAJ&hl=en) page for a list of my publications.
 
 
 Disclaimer {#disclaimer}
@@ -122,12 +135,12 @@ CV %<>% print_section('career_summary')
 ```
 
 
-Scientific Publications {data-icon=book}
---------------------------------------------------------------------------------
+<!-- Scientific Publications {data-icon=book} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r academic_articles}
-CV %<>% print_section('academic_articles')
-```
+<!-- ```{r academic_articles} -->
+<!-- CV %<>% print_section('academic_articles') -->
+<!-- ``` -->
 
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
@@ -179,3 +192,9 @@ CV %<>% print_section('volunteering')
 CV %<>% print_links()
 ```
 
+Media  {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r press}
+CV %<>% print_section('about_me_press')
+```
