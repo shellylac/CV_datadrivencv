@@ -4,7 +4,7 @@ author: Shelly Lachish
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
-    value: false
+    value: true
 output:
   pagedown::html_resume:
     css: ['dd_cv.css', 'resume']
@@ -70,7 +70,7 @@ CV %>% print_contact_info()
 
 ```{r view_download}
 if(params$pdf_mode){
-  cat("View this CV online at _https://github.com/shellylac/CV_datadrivencv/_")
+  cat("View this CV online [here](https://github.com/shellylac/CV_datadrivencv/)")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/ShellyL_CV.pdf)")
 }
@@ -92,19 +92,24 @@ CV %>% print_skill_bars(data = CV$data_skills)
 ```
 
 
+<!-- Research Papers {#researchskills} -->
+<!-- -------------------------------------------------------------------------------- -->
+
+<!-- ```{r skills_bar_researchpapers} -->
+<!-- CV %>% print_skill_bars(data = CV$research_papers) -->
+<!-- ``` -->
+
 Research Papers
 --------------------------------------------------------------------------------
-Please see my [Google Scholar](https://scholar.google.co.uk/citations?user=mt4I9G0AAAAJ&hl=en) page for a list of my publications.
+Please see my [Google Scholar](https://scholar.google.co.uk/citations?user=mt4I9G0AAAAJ&hl=en) page for a full list of my research papers.
 
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made in R with [**pagedown**](https://github.com/rstudio/pagedown). 
-
+Made in R with [**pagedown**](https://github.com/rstudio/pagedown).
 Source code available [here](https://github.com/shellylac/CV_datadrivencv).
-
-Last updated on `r Sys.Date()`.
+<!-- Last updated on `r Sys.Date()`. -->
 
 
 Main

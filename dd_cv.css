@@ -31,8 +31,8 @@ sup {
   /* Override default right margin for sidebar and decrease top and bottom margins*/
   --pagedjs-margin-right: 0.2in;
   --pagedjs-margin-left: 0.2in;
-  --pagedjs-margin-top: 0.8in;
-  --pagedjs-margin-bottom: 0.8in;
+  --pagedjs-margin-top: 0.9in;
+  --pagedjs-margin-bottom: 0.9in;
 }
 
 /* Customize some of the sizing variables */
@@ -104,7 +104,6 @@ sup {
   width: 100%;
 }
 
-
 /* When the class no-timeline is added we remove the after psuedo element from the header... */
 
 /* Removes the psuedo element on h2 tags for this section */
@@ -126,9 +125,8 @@ sup {
   box-shadow: 1px 1px 4px black;
 }
 
-
-/* remove the header before the Contact section in the sidebar
-this works because we gave it a special class = Contact {#contact .specialcontact} */
+/* remove the space header before the Contact section in the sidebar - 
+this works because we gave it a special class in the rmarkdown file = Contact {#contact .specialcontact} */
 .specialcontact[data-id="contact"] {
   margin-top: unset;
 }

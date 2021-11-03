@@ -44,6 +44,7 @@ create_CV_object <-  function(data_location,
     #cv$skills        <- read_gsheet(sheet_id = "language_skills")
     cv$data_skills   <- subset(read_gsheet(sheet_id = "language_skills"), block == "data_skills")
     cv$tech_stack    <- subset(read_gsheet(sheet_id = "language_skills"), block == "tech_stack")
+    cv$research_papers <- subset(read_gsheet(sheet_id = "language_skills"), block == "research_papers")
     cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
     cv$contact_info  <- read_gsheet(sheet_id = "contact_info")
   } else {
