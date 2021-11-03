@@ -72,7 +72,7 @@ CV %>% print_contact_info()
 if(params$pdf_mode){
   cat("View this CV online [here](https://github.com/shellylac/CV_datadrivencv/)")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/master/ShellyL_CV.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/blob/master/ShellyL_CV.pdf)")
 }
 ```
 
