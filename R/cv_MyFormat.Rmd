@@ -7,7 +7,7 @@ params:
     value: true
 output:
   pagedown::html_resume:
-    css: ['dd_cv.css', 'resume']
+    css: ['cv_MyFormat_custom.css', 'resume']
     self_contained: true
 ---
 
@@ -27,7 +27,8 @@ knitr::opts_chunk$set(
 )
 
 library(magrittr) # For the pipe
-source("cv_printing_functions_MyFormat.r")
+library(here) #relative paths
+source(here("R", "cv_printing_functions_MyFormat.r"))
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
