@@ -6,7 +6,12 @@ rmarkdown::render(here("R","cv_MyFormat.rmd"),
                   params = list(pdf_mode = FALSE),
                   output_file = here("cv_versions" , "ShellyL_CV.html"))
 
-# Knit the PDF version to temporary html location
+# Knit the PDF version to temporary html location -
+
+#* note - sometimes the pdf version goes over to another page
+#* quickest way to fix it is to temporarily change the font size
+#* @ line 136 in the custom css file 
+
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
 rmarkdown::render(here("R","cv_MyFormat.rmd"),
                   params = list(pdf_mode = TRUE),
