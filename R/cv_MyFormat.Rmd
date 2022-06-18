@@ -165,13 +165,20 @@ CV %<>% print_section('teaching_positions')
 Grants and Awards  {data-icon=medal}
 --------------------------------------------------------------------------------
 
+<!-- ```{r grants}
+<!-- CV %<>% print_section('grants_and_awards_list')
+<!-- ``` --->
+
 ```{r grants}
 CV %<>% print_section('grants_and_awards')
 ```
 
-
 Invited Seminars  {data-icon=comments}
 --------------------------------------------------------------------------------
+
+<!-- ```{r seminars}
+<!-- CV %<>% print_section('invited_seminars_list')
+<!-- ``` --->
 
 ```{r seminars}
 CV %<>% print_section('invited_seminars')
@@ -180,6 +187,11 @@ CV %<>% print_section('invited_seminars')
 
 Professional Service  {data-icon=group}
 --------------------------------------------------------------------------------
+
+<!-- ```{r prof_service}
+<!-- CV %<>% print_section('professional_service_list')
+<!-- ``` --->
+
 
 ```{r prof_service}
 CV %<>% print_section('professional_service')
