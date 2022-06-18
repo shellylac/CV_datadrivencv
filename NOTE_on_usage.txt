@@ -1,0 +1,5 @@
+Last time I edited this I added entries in the googlesheet that present the various information
+in the different categories as "list" entries.
+
+These can be turned on/off by changing the TRUE/FALSE flag in the googlesheet
+AND by switching which section gets printed in the markdown script.
