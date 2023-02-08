@@ -170,49 +170,44 @@ Grants and Awards  {data-icon=medal}
 <!-- ``` --->
 
 ```{r grants}
-CV %<>% print_section('grants_and_awards')
+#CV %<>% print_section('grants_and_awards')
+CV %<>% print_section('grants_and_awards_list')
 ```
 
 Invited Seminars  {data-icon=comments}
 --------------------------------------------------------------------------------
 
-<!-- ```{r seminars}
-<!-- CV %<>% print_section('invited_seminars_list')
-<!-- ``` --->
-
 ```{r seminars}
-CV %<>% print_section('invited_seminars')
+#CV %<>% print_section('invited_seminars')
+CV %<>% print_section('invited_seminars_list')
 ```
 
 
 Professional Service  {data-icon=group}
 --------------------------------------------------------------------------------
 
-<!-- ```{r prof_service}
-<!-- CV %<>% print_section('professional_service_list')
-<!-- ``` --->
-
 
 ```{r prof_service}
-CV %<>% print_section('professional_service')
+#CV %<>% print_section('professional_service')
+CV %<>% print_section('professional_service_list')
 ```
 
 
-Volunteering  {data-icon=hands-helping}
---------------------------------------------------------------------------------
+<!-- Volunteering  {data-icon=hands-helping} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r volunteering}
-CV %<>% print_section('volunteering')
-```
+<!-- ```{r volunteering} -->
+<!-- CV %<>% print_section('volunteering') -->
+<!-- ``` -->
 
 
-```{r print_links}
-CV %<>% print_links()
-```
+<!-- ```{r print_links} -->
+<!-- CV %<>% print_links() -->
+<!-- ``` -->
 
-Media  {data-icon=newspaper}
---------------------------------------------------------------------------------
+<!-- Media  {data-icon=newspaper} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-```{r press}
-CV %<>% print_section('about_me_press')
-```
+<!-- ```{r press} -->
+<!-- CV %<>% print_section('about_me_press') -->
+<!-- ``` -->
