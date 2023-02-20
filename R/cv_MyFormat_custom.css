@@ -72,10 +72,10 @@ sup {
   padding-left: 1rem;
 }
 
+/* This had - content: "??? "; - as the last entry */
 .aside li::before {
   position: relative;
   margin-left: -4.25pt;
-  content: "• ";
 }
 
 /* Make sure elements in asside are centered and have a nice small text */
