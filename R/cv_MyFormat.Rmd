@@ -105,12 +105,12 @@ Research Papers
 Please see my [Google Scholar](https://scholar.google.co.uk/citations?user=mt4I9G0AAAAJ&hl=en) page for a full list of my research papers.
 
 
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
+<!-- Disclaimer {#disclaimer} -->
+<!-- -------------------------------------------------------------------------------- -->
 
-Made in R with [**pagedown**](https://github.com/rstudio/pagedown).
-Source code available [here](https://github.com/shellylac/CV_datadrivencv).
-<!-- Last updated on `r Sys.Date()`. -->
+<!-- Made in R with [**pagedown**](https://github.com/rstudio/pagedown). -->
+<!-- Source code available [here](https://github.com/shellylac/CV_datadrivencv). -->
+<!-- <!-- Last updated on `r Sys.Date()`. --> -->
 
 
 Main
