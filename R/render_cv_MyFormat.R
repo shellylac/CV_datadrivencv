@@ -2,7 +2,7 @@ library(here)
 # This script builds both the HTML and PDF versions of your CV
 
 # Knit the HTML version
-rmarkdown::render(here("R","cv_MyFormat.rmd"),
+rmarkdown::render(here("R","cv_MyFormat_2023.rmd"),
                   params = list(pdf_mode = FALSE),
                   output_file = here("cv_versions" , "ShellyL_CV.html"))
 
@@ -17,7 +17,7 @@ rmarkdown::render(here("R","cv_MyFormat.rmd"),
 #* @ line 7 in the custom css file 
 
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
-rmarkdown::render(here("R","cv_MyFormat.rmd"),
+rmarkdown::render(here("R","cv_MyFormat_2023.rmd"),
                   params = list(pdf_mode = TRUE),
                   output_file = tmp_html_cv_loc)
 

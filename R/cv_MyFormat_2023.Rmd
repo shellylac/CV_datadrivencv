@@ -69,13 +69,13 @@ CV %>% print_contact_info()
 ```
 
 
-<!-- # ```{r view_download} -->
-<!-- if(params$pdf_mode){ -->
-<!--   cat("View this CV online [here](https://www.shellyl.me/ShellyL_CV.html)") -->
-<!-- } else { -->
-<!--   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/blob/master/cv_versions/ShellyL_CV.pdf)") -->
-<!-- } -->
-<!-- ``` -->
+```{r view_download}
+if(params$pdf_mode){
+  cat("View this CV online [here](https://www.shellyl.me/ShellyL_CV.html)")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/blob/master/cv_versions/ShellyL_CV.pdf)")
+}
+```
 
 Skills {#dataskills}
 --------------------------------------------------------------------------------
@@ -100,7 +100,7 @@ Please see my [Google Scholar](https://scholar.google.co.uk/citations?user=mt4I9
 <!-- -------------------------------------------------------------------------------- -->
 <!-- Made in R with [**pagedown**](https://github.com/rstudio/pagedown). -->
 <!-- Source code available [here](https://github.com/shellylac/CV_datadrivencv). -->
-<!-- <!-- Last updated on `r Sys.Date()`. --> -->
+<!-- <!-- Last updated on `r Sys.Date()`. -->
 
 
 
