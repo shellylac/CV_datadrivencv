@@ -32,7 +32,7 @@ source(here("R", "cv_printing_functions_MyFormat.r"))
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/19JPpb3PktaaIKQ5-f0bvnld0a72E-fksc0VlZe6vAaw",  
+  data_location = "https://docs.google.com/spreadsheets/d/19JPpb3PktaaIKQ5-f0bvnld0a72E-fksc0VlZe6vAaw/edit?gid=917338460#gid=917338460",  
   pdf_mode = params$pdf_mode
 )
 
