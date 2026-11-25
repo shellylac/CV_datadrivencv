@@ -36,5 +36,7 @@ pagedown::chrome_print(
   output = here("cv_versions", "ShellyL_CV.pdf")
 )
 
-# pagedown::chrome_print(input = tmp_html_cv_loc,
-#                        output = here("cv_versions", "ShellyL_CV_csiro.pdf"))
+pagedown::chrome_print(
+  input = tmp_html_cv_loc,
+  output = here("cv_versions", "ShellyL_CV_PHIAvdEpiBackfill.pdf")
+)
