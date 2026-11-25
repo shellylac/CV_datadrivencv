@@ -22,7 +22,7 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
-  results='asis', 
+  results = 'asis',
   echo = FALSE
 )
 
@@ -31,23 +31,29 @@ library(here) #relative paths
 source(here("R", "cv_printing_functions_MyFormat.r"))
 
 # Read in all data and initialize a CV printer object
+# CV <- create_CV_object(
+#   data_location = "https://docs.google.com/spreadsheets/d/19JPpb3PktaaIKQ5-f0bvnld0a72E-fksc0VlZe6vAaw/edit?gid=917338460#gid=917338460",
+#   pdf_mode = params$pdf_mode
+# )
+
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/19JPpb3PktaaIKQ5-f0bvnld0a72E-fksc0VlZe6vAaw/edit?gid=917338460#gid=917338460",  
+  data_location = "https://docs.google.com/spreadsheets/d/1x4uv-KAVHL59yj3JTB3B2imrl2ctOHqC5QhiiXFY054/edit?usp=sharing",
   pdf_mode = params$pdf_mode
 )
-
 ```
 
 
 ```{r align_dots}
 # When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
-if(params$pdf_mode) {
-    cat("
+if (params$pdf_mode) {
+  cat(
+    "
 <style>
 :root{
   --decorator-outer-offset-left: -6.5px;
 }
-</style>")
+</style>"
+  )
 }
 ```
 
@@ -70,10 +76,13 @@ CV %>% print_contact_info()
 
 
 ```{r view_download}
-if(params$pdf_mode){
-  cat("View this CV online [here](https://www.shellyl.me/ShellyL_CV.html)")
+if (params$pdf_mode) {
+  " "
+  # cat("View this CV online [here](https://www.shellyl.me/ShellyL_CV.html)")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/blob/master/cv_versions/ShellyL_CV.pdf)")
+  cat(
+    "[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/shellylac/CV_datadrivencv/blob/master/cv_versions/ShellyL_CV.pdf)"
+  )
 }
 ```
 
@@ -113,7 +122,7 @@ Dr Shelly Lachish {#title}
 
 ```{r intro_text}
 # Note the special double pipe so we modify the CV object in place
-CV %<>% print_text_block("intro") 
+CV %<>% print_text_block("intro")
 ```
 
 
@@ -151,7 +160,7 @@ Teaching Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ```{r teaching}
-CV %<>% print_section('teaching_positions_list')
+CV %<>% print_section('teaching_positions')
 ```
 
 Professional Service  {data-icon=group}
