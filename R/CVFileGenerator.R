@@ -1,6 +1,8 @@
 #Need to install an older version of the icon package (now called icons) to get his package to work
-remotes::install_github('mitchelloharawild/icons@v0.1.0')
-devtools::install_github("nstrayer/datadrivencv")
+#remotes::install_github('mitchelloharawild/icons@v0.1.0')
+#devtools::install_github("nstrayer/datadrivencv")
+pak::pak("nstrayer/datadrivencv")
+pak::pak('mitchelloharawild/icons@v0.1.0')
 #skip the updating of the icon package
 
 #***********************
